@@ -7,7 +7,7 @@ describe('stringAnalyzer', () => {
     let analysis = stringAnalyzer(text)
 
     expect(analysis.wordCount).toBe(5)
-    expect(analysis.characterCount).toBe(0)
+    expect(analysis.characterCount).toBe(17)
     expect(analysis.lineCount).toBe(0)
     expect(analysis.longestWordLength).toBe(0)
     expect(analysis.mostCommonLetter).toBe(0)
