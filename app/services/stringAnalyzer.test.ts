@@ -9,7 +9,7 @@ describe('stringAnalyzer', () => {
     expect(analysis.wordCount).toBe(5)
     expect(analysis.characterCount).toBe(17)
     expect(analysis.lineCount).toBe(0)
-    expect(analysis.longestWordLength).toBe(0)
+    expect(analysis.longestWordLength).toBe(6)
     expect(analysis.mostCommonLetter).toBe(0)
   })
 })
