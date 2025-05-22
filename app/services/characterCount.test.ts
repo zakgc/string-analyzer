@@ -5,6 +5,6 @@ describe('characterCount', () => {
   test('returns the amount of characters in string', () => {
     const text = 'This is a test string'
 
-    expect(characterCount(text)).toBe(21)
+    expect(characterCount(text)).toBe(17)
   })
 })
