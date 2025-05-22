@@ -1,6 +1,8 @@
+import { wordCount } from "./wordCount"
+
 export const stringAnalyzer = (text: string) => {
   return {
-    wordCount: 0,
+    wordCount: wordCount(text),
     characterCount: 0,
     lineCount: 0,
     longestWordLength: 0,
