@@ -1,6 +1,7 @@
 import { wordCount } from "./wordCount"
 import { characterCount } from "./characterCount"
 import { longestWordLength } from "./longestWordLength"
+import { mostCommonLetter } from "./mostCommonLetter"
 
 export const stringAnalyzer = (text: string) => {
   return {
@@ -8,6 +9,6 @@ export const stringAnalyzer = (text: string) => {
     characterCount: characterCount(text),
     lineCount: 0,
     longestWordLength: longestWordLength(text),
-    mostCommonLetter: 0
+    mostCommonLetter: mostCommonLetter(text)
   }
 }

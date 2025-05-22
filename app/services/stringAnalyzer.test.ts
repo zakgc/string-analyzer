@@ -10,6 +10,6 @@ describe('stringAnalyzer', () => {
     expect(analysis.characterCount).toBe(17)
     expect(analysis.lineCount).toBe(0)
     expect(analysis.longestWordLength).toBe(6)
-    expect(analysis.mostCommonLetter).toBe(0)
+    expect(analysis.mostCommonLetter).toBe('t')
   })
 })
