@@ -10,6 +10,14 @@ describe('validateRequestBody', () => {
     expect(validateRequestBody(requestBody)).toBe(400)
   })
 
+  test('returns 400 if requestBody does not have text', () => {
+    let requestBody = {
+      notText: 'text'
+    }
+
+    expect(validateRequestBody(requestBody)).toBe(400)
+  })
+
   test('returns 400 if character count is less than 5', () => {
     let text = 'Tiny'
     let requestBody = {

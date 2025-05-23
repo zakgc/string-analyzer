@@ -45,14 +45,14 @@ resource "aws_cloudwatch_log_group" "analyze" {
 data "archive_file" "lambda_analyze" {
   type = "zip"
 
-  source_dir  = "../${path.module}/app"
-  output_path = "../${path.module}/app.zip"
+  source_dir  = "../${path.module}/dist"
+  output_path = "../${path.module}/dist.zip"
 }
 
 resource "aws_s3_object" "lambda_analyze" {
   bucket = aws_s3_bucket.lambda_bucket.id
 
-  key    = "app.zip"
+  key    = "dist.zip"
   source = data.archive_file.lambda_analyze.output_path
 
   etag = filemd5(data.archive_file.lambda_analyze.output_path)

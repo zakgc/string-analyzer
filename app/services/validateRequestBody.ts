@@ -1,7 +1,15 @@
 import { characterCount } from "./characterCount"
 
-export const validateRequestBody = (body: any) => {
+export const validateRequestBody = (body: any): string | number => {
+  console.log(body)
+  console.log(isInvalidJSON(body))
   if (isInvalidJSON(body)) {
+    return 400
+  }
+
+  console.log(body.hasOwnProperty('text'))
+
+  if(!body.hasOwnProperty('text')) {
     return 400
   }
 
@@ -16,7 +24,9 @@ export const validateRequestBody = (body: any) => {
 
 const isInvalidJSON = (body: any): boolean => {
   try {
+    console.log(JSON.parse(body))
     JSON.parse(body)
+    return false
   } catch (error) {
     return true
   }
