@@ -1,7 +1,7 @@
 import { characterCount } from "./characterCount"
 
 export const validateRequestBody = (body: any) => {
-  if (isInvalidJSON(body)) {
+  if (!('text' in body)) {
     return 400
   }
 
@@ -12,14 +12,4 @@ export const validateRequestBody = (body: any) => {
   }
 
   return body.text
-}
-
-const isInvalidJSON = (body: any): boolean => {
-  try {
-    JSON.parse(body)
-  } catch (error) {
-    return true
-  }
-
-  return false
 }

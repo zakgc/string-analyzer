@@ -2,9 +2,9 @@ import { describe, expect, test } from "vitest";
 import { validateRequestBody } from "./validateRequestBody";
 
 describe('validateRequestBody', () => {
-  test('returns 400 if requestBody is invalid JSON', () => {
+  test('returns 400 if requestBody is does not have text', () => {
     let requestBody = {
-      array: [ 16, 23, ]
+      notext: 'text is not here'
     }
 
     expect(validateRequestBody(requestBody)).toBe(400)
