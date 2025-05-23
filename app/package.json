@@ -1,0 +1,13 @@
+{
+  "name": "string-analyzer-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.92",
+    "@types/node": "^22.15.21",
+    "typescript": "^5.0.0"
+  }
+}
