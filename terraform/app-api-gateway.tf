@@ -6,13 +6,6 @@ resource "aws_apigatewayv2_integration" "lambda_app" {
   integration_method = "POST"
 }
 
-resource "aws_apigatewayv2_route" "get_app" {
-  api_id = aws_apigatewayv2_api.main.id
-
-  route_key = "GET /analyze"
-  target    = "integrations/${aws_apigatewayv2_integration.lambda_app.id}"
-}
-
 resource "aws_apigatewayv2_route" "post_app" {
   api_id = aws_apigatewayv2_api.main.id
 
